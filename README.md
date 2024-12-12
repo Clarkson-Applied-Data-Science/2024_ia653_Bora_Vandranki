@@ -218,9 +218,3 @@ Potential enhancements to further improve the pipeline:
 
 ---
 
-## License
-The project is generally released under an MIT License (or a similar open-source license), allowing users to adapt and build upon the work with minimal restrictions. Please refer to the LICENSE file included in the project repository for full details.
-
----
-
-By following this detailed workflow—from understanding the data and applying simple models through to sophisticated approaches like Transformers and zero-shot classification—you gain a broad perspective on effective text classification strategies for the domain of skin disease descriptions.
