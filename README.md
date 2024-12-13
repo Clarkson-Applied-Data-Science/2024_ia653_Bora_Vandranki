@@ -338,8 +338,7 @@ Moving beyond linear models like Naive Bayes and Logistic Regression, we introdu
 
 ---
 
-## Transformer Model : DistilBERT
-
+## Transformers (DistilBERT)
 To enhance classification performance, we utilized **DistilBERT**, a lightweight transformer-based language model pre-trained on vast text corpora. DistilBERT builds on the BERT architecture while being smaller and faster, making it efficient for fine-tuning.
 
 ### Why DistilBERT?
