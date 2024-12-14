@@ -93,7 +93,7 @@ The process begins by reading the dataset from a CSV file into a data structure 
 Through these steps, we gain insights into the dataset’s structure and potential preprocessing needs.
 
  <img src="/NLP_Project/nlp- 1.png" alt="NLP1">
-  <img src="/NLP_Project/nlp- 2.png" alt="NLP2">
+ <img src="/NLP_Project/nlp- 2.png" alt="NLP2">
 Distribution of Text Lengths Chart: The histogram shows the text lengths are mostly centered around 40 words, with a normal distribution. This suggests uniformity in text size, which is helpful for preprocessing steps like padding or truncation in model training.
 
 
@@ -137,7 +137,7 @@ This table shows that TF-IDF effectively differentiates the importance of words 
 
 This structured approach to data preparation ensures that the text data is optimally formatted for training machine learning models, making them more efficient and accurate in predictions.
 
-# Code photo for reference
+<img src="/NLP_Project/nlp- 4.png" alt="NLP3">
 
 ---
 
