@@ -227,13 +227,6 @@ To evaluate our machine learning models, we use several key metrics:
      F1-Score = 2 * (Precision * Recall) / (Precision + Recall)
      ```
 
-3. **Confusion Matrix:**
-   - Visualizes actual versus predicted classifications, highlighting misclassifications.
-
-
-
-
-## Photos
 
 
 ---
@@ -260,7 +253,15 @@ To boost model generalization and address limitations due to a small dataset siz
 ### Implementation of Synonym Replacement:
 By selectively altering words in training examples, we created an expanded dataset that better equips the classifier to handle unseen examples. This approach ensures that the model is not just memorizing specific phrases but learning to recognize patterns that are more broadly applicable, significantly enhancing its predictive accuracy.
 
-code photos also and photos of data augemntation text lenth and other till model applied
+
+
+<img src="/NLP_Project/nlp -8.png" alt="NLP9">
+<img src="/NLP_Project/nlp -9.png" alt="NLP10">
+
+<img src="/NLP_Project/nlp -10.png" alt="NLP11">
+
+
+
 ---
 
 ## Evaluating Models on Augmented Data
@@ -269,6 +270,10 @@ After augmentation, we train and evaluate models again:
 - Compare performance metrics before and after augmentation.
 - Look for improvements in accuracy, recall, and precision on augmented test sets.
 - Check if the model overcomes previous weaknesses by reducing error rates on particular classes.
+
+
+<img src="/NLP_Project/nlp -11.png" alt="NLP7">
+<img src="/NLP_Project/nlp -12.png" alt="NLP8">
 
 ---
 
