@@ -169,8 +169,11 @@ By employing these baseline models, we aim to:
 - **Set Performance Benchmarks:** Establish a performance baseline to gauge the effectiveness of more advanced models.
 - **Simplicity vs. Complexity:** Understand the trade-offs between simpler algorithms and more complex models in terms of computational cost and predictive accuracy.
 
-These models not only serve as a proof of concept but also help in identifying potential areas for improvement as we explore more sophisticated machine learning techniques later in the project.
 
+<img src="/NLP_Project/nlp -5.png" alt="NLP4">
+These models not worked as planned becuase of the dataset size so with futher consideration and research we will try to augment data.
+<img src="/NLP_Project/nlp -6.png" alt="NLP5">
+<img src="/NLP_Project/nlp -7.png" alt="NLP6">
 
 ---
 
