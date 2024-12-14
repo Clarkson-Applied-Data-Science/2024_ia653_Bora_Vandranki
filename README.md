@@ -92,9 +92,11 @@ The process begins by reading the dataset from a CSV file into a data structure 
 
 Through these steps, we gain insights into the dataset’s structure and potential preprocessing needs.
 
-### nlp -1. nlp -2, nlp -3 only add values image and text emotion length image
-
+ <img src="/NLP_Project/nlp- 1.png" alt="NLP1">
+  <img src="/NLP_Project/nlp- 2.png" alt="NLP2">
 Distribution of Text Lengths Chart: The histogram shows the text lengths are mostly centered around 40 words, with a normal distribution. This suggests uniformity in text size, which is helpful for preprocessing steps like padding or truncation in model training.
+
+
 ---
 
 ## Preprocessing and Feature Engineering
