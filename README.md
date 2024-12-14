@@ -15,14 +15,12 @@ This README provides a comprehensive, step-by-step explanation of the workflow a
 8. [Model Evaluation Metrics](#model-evaluation-metrics)
 9. [Data Augmentation](#data-augmentation)
 10. [Evaluating Models on Augmented Data](#evaluating-models-on-augmented-data)
-11. [Neural Network Models](#neural-network-models)
-12. [Transformers (DistilBERT)](#transformers-distilbert)
-13. [Zero-Shot Classification](#zero-shot-classification)
-14. [Confusion Matrices and Classification Reports](#confusion-matrices-and-classification-reports)
-15. [Visualization of Results](#visualization-of-results)
-16. [Future Work](#future-work)
-17. [License](#license)  -  daat leakage 
-18 refernce
+11. [Addressing Data Leakage Concerns](#addressing-data-leakage-concerns)
+12. [Neural Network Models](#neural-network-models)
+13. [Transformers (DistilBERT)](#transformers-distilbert)
+14. [Zero-Shot Classification](#zero-shot-classification)
+15. [Future Work](#future-work)
+
 
 
 ---
@@ -331,8 +329,8 @@ Moving beyond linear models like Naive Bayes and Logistic Regression, we introdu
 ### Performance Metrics:
 | Model       | Original Test Set Accuracy | Expanded Dataset Accuracy |
 |-------------|----------------------------|---------------------------|
-| NN          | 77.91%                     | 70.05%                    |
-| RNN (LSTM)  | 93.02%                     | 73.31%                    |
+| NN          | 79.07%                     | 70.28%                    |
+| RNN (LSTM)  | 96.51%                     | 79.25%                    |
 
 ### Key Observations:
 - The RNN model significantly outperformed the NN model on both the original and expanded datasets, reflecting its ability to capture sequential dependencies in text.
@@ -347,6 +345,13 @@ Moving beyond linear models like Naive Bayes and Logistic Regression, we introdu
 2. **Shallow RNNs or GRUs:**
    - GRUs are computationally lighter than LSTMs but may not perform as well on tasks requiring nuanced understanding of long-term dependencies. 
    - For our dataset, with its complex and often lengthy disease descriptions, LSTMs proved more effective. (Reference: GRU vs LSTM for Sequential Data, Towards Data Science)
+
+### Loss Curve
+
+<img src="/NLP_Project/nlp -13.png" alt="NLP12">
+<img src="/NLP_Project/nlp -14.png" alt="NLP13">
+<img src="/NLP_Project/nlp -16.png" alt="NLP14">
+
 
 ---
 
@@ -369,6 +374,10 @@ To enhance classification performance, we utilized **DistilBERT**, a lightweight
 
 ### Results
 - **Transformer Model Accuracy:** Achieved a notable increase in performance compared to traditional and basic neural network models.
+
+  <img src="/NLP_Project/nlp -17.png" alt="NLP15">
+
+
 
 ### Tools Used
 - **Hugging Face Transformers:** For model implementation and fine-tuning.
@@ -421,6 +430,9 @@ We use the **BART Large MNLI Model**, a transformer-based language model pre-tra
 - **Scalability:** Useful for tasks where new categories might be added dynamically, eliminating the need for retraining.
 
 
+<img src="/NLP_Project/nlp -18.png" alt="NLP16">
+<img src="/NLP_Project/nlp -19.png" alt="NLP17">
+
 ### References
 1. **Hugging Face Documentation:** [Zero-Shot Classification Pipeline](https://huggingface.co/transformers/task_summary.html#zero-shot-classification)  
 2. **BART Model Paper:** Lewis, M., Liu, Y., Goyal, N., et al. (2020). [BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension](https://arxiv.org/abs/1910.13461)  
@@ -430,45 +442,26 @@ By incorporating zero-shot classification, we demonstrate how general-purpose mo
 
 ---
 
-## Confusion Matrices and Classification Reports
-To improve interpretability:
-
-- **Textual Class Labels in Reports:**  
-  Instead of numeric labels, we present each metric under the corresponding disease name. This helps domain experts and stakeholders understand where models struggle.
-
-- **Labeled Confusion Matrices:**  
-  Annotating both axes of the confusion matrices with disease names makes it easier to see which diseases get confused. For instance, a model may frequently mistake Eczema for Psoriasis, suggesting a need for more training examples or refined preprocessing.
-
----
-
-## Visualization of Results
-Visual representations help interpret performance:
-
-- **Bar Charts for Accuracy:**  
-  Compare models (Naive Bayes, Logistic Regression, NN, RNN, Transformers) side by side on both original and augmented datasets.
-  
-- **Learning Curves:**  
-  Show how models improve over epochs for neural networks. Plots of training vs. validation accuracy and loss help diagnose overfitting or underfitting.
-
-- **Improvement Over Baselines:**  
-  Visual comparisons highlight improvements gained from augmentation, advanced models, or hyperparameter tuning.
-
----
-
 ## Future Work
-Potential enhancements to further improve the pipeline:
 
-- **Advanced Augmentation Methods:**  
-  Beyond synonym replacement, consider back-translation or contextual augmentation using language models.
-  
-- **Additional Transformer Models:**  
-  Experiment with larger or more specialized transformer models (e.g., RoBERTa, BioBERT) trained on medical texts.
-  
-- **Explainability Tools:**  
-  Apply methods like LIME or SHAP to understand why models make certain predictions, potentially yielding insights into model behavior and biases.
+To further improve the pipeline, several potential enhancements can be explored:
 
-- **Domain-Specific Embeddings:**  
-  Further fine-tune embeddings with a large corpus of dermatological literature to achieve better domain adaptation.
+- **Advanced Augmentation Methods:** Experiment with techniques like back-translation and contextual augmentation using language models to diversify training data.
+- **Specialized Transformers:** Test models like BioBERT or RoBERTa, pre-trained on medical or advanced text corpora, for improved accuracy on domain-specific tasks.
+- **Explainability Tools:** Apply LIME or SHAP to better understand model predictions and highlight influential text features.
+- **Domain-Specific Embeddings:** Fine-tune embeddings using dermatological literature to improve understanding of medical terminology and rare diseases.
+- **Multimodal Learning:** Combine text descriptions with dermatological images to build a comprehensive diagnosis system.
+
+These enhancements can lead to more robust, accurate, and explainable models for skin disease classification.
+
+---
+
+## Conclusion
+
+This project successfully demonstrates the potential of machine learning and deep learning models in classifying skin disease descriptions. By employing a structured pipeline that includes baseline models, advanced neural networks, and transformers like DistilBERT, we achieved significant improvements in classification accuracy and generalization. Data augmentation and hyperparameter tuning further enhanced model robustness, while zero-shot classification showcased the versatility of pre-trained language models for domain-specific tasks.
+
+Looking ahead, integrating advanced augmentation techniques, leveraging specialized transformers, and exploring multimodal approaches can further optimize the pipeline. This project serves as a solid foundation for building scalable, reliable, and interpretable tools for dermatological diagnosis, bridging the gap between machine learning and clinical applications.
+
 
 ---
 
